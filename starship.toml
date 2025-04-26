@@ -1,0 +1,134 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+palette = "catppuccin_frappe"
+
+format = """
+[  ](bg:blue fg:000000)\
+[](bg:lavender fg:blue)\
+$directory\
+[](fg:lavender bg:black)\
+$git_branch\
+$git_status\
+$nodejs\
+$python\
+$java\
+$rust\
+$golang\
+$c\
+$zig\
+$php\
+$time\
+[](fg:black)\
+\n$character
+"""
+
+[directory]
+style = "fg:black bg:lavender"
+format = "[ $path ]($style)"
+truncation_length = 10
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Videos" = " "
+"Projects" = " "
+"Workspace" = " "
+"Public" = " "
+"Templates" = " "
+"src" = " "
+"bin" = " "
+".config" = " "
+"Pictures/Screenshots" = " "
+
+[git_branch]
+symbol = " "
+style = "bg:black"
+format = '[[ $symbol $branch ](fg:blue bg:black)]($style)'
+
+[git_status]
+style = "bg:black"
+format = '[[($all_status$ahead_behind )](fg:blue bg:black)]($style)'
+
+[python]
+symbol = ""
+style = "bg:black"
+format = '[[$symbol ](fg:blue bg:black)]($style)'
+
+[zig]
+symbol = ""
+style = "bg:black"
+format = '[[$symbol ](fg:blue bg:black)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:black"
+format = '[[$symbol ](fg:blue bg:black)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:black"
+format = '[[$symbol ](fg:blue bg:black)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:black"
+format = '[[$symbol ](fg:blue bg:black)]($style)'
+
+[c]
+symbol = ""
+style = "bg:black"
+format = '[[$symbol (C)](fg:blue bg:black)]($style)'
+
+[php]
+symbol = ""
+style = "bg:black"
+format = '[[$symbol ](fg:blue bg:black)]($style)'
+
+[java]
+symbol = ""
+style = "bg:black"
+format = '[[$symbol ](fg:blue bg:black)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:black"
+format = '[[ $time ](fg:blue bg:black)]($style)'
+
+[character]
+success_symbol = "[=>](lavender)"
+error_symbol = "[==>](peach)"
+vimcmd_symbol = "[=<](subtext1)"
+
+[palettes.catppuccin_frappe]
+rosewater = "#f2d5cf"
+flamingo = "#eebebe"
+pink = "#f4b8e4"
+mauve = "#ca9ee6"
+red = "#e78284"
+maroon = "#ea999c"
+peach = "#ef9f76"
+yellow = "#e5c890"
+green = "#a6d189"
+teal = "#81c8be"
+sky = "#99d1db"
+sapphire = "#85c1dc"
+blue = "#8caaee"
+lavender = "#babbf1"
+text = "#c6d0f5"
+subtext1 = "#b5bfe2"
+subtext0 = "#a5adce"
+overlay2 = "#949cbb"
+overlay1 = "#838ba7"
+overlay0 = "#737994"
+surface2 = "#626880"
+surface1 = "#51576d"
+surface0 = "#414559"
+base = "#303446"
+mantle = "#292c3c"
+crust = "#232634"
